@@ -50,10 +50,34 @@
           <div class="formbg-outer">
             <div class="formbg">
               <div class="formbg-inner padding-horizontal--48">
+                <form id="consultabranch">
+        <h3>Buscar el ID de la Sucursal</h3>
+        <div class="form-group">
+            <label for="id_branch">ID</label>
+            <input type="text" id="id_branch" name="id_branch" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
                 <form id="stripe-login">
                   <div class="field padding-bottom--24">
-                    <label for="email">Email</label>
+                    <label for="email">Nombre</label>
+                    <input type="text" name="email">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Apellido paterno</label>
+                    <input type="text" name="email">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Apellido materno</label>
+                    <input type="text" name="email">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Correo</label>
                     <input type="email" name="email">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Numero telefonico</label>
+                    <input type="number" name="email">
                   </div>
                   <div class="field padding-bottom--24">
                     <input type="submit" name="submit" value="Actualizar">
