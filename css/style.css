@@ -1,0 +1,71 @@
+.navbar {
+    margin-bottom: 0;
+    background-color:#001449;
+    color: #fff;
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #005bc5 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.jumbotron {
+    background-image: url('https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/02/21/perros-jugando.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    padding: 100px 35px;
+}
+.bg-green {
+  background-color: #001449;
+  color: #fff;
+}
+.logo-small {
+    color: #17f9ff;
+    font-size: 50px;
+}
+
+.logo {
+    color: #00b4fc;
+    font-size: 200px;
+}
+.container-fluid {
+  padding: 60px 50px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #001449;
+}}
