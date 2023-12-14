@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<html>
+<head>
+    <title>Logan</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFqc82sJSxb4czh5TPUobEUYW8An0Z-qA&callback=initMap" async defer></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+         #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }   
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        let map, infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 18.912848976615862, lng: -99.2031163685413 },
+    zoom: 18,
+  });
+
+  var marker = new google.maps.Marker({
+    position: { lat: 18.912848976615862, lng: -99.2031163685413 },
+    map: map,
+    icon: icono,
+    title: 'Logan: Eduación Canina y felina'
+  });
+
+  var zoomLevel = 15;
+  var speed = 1;
+
+  //Icono de una huella de perro y asignarla al marcador
+    var icono = {
+        url: "https://image.flaticon.com/icons/png/512/25/25694.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+    };
+
+    var zoomAnimation = setInterval(function( ){
+        if(map.getZoom() < zoomLevel){
+            map.setZoom(map.getZoom() + 1);
+        } else {
+            clearInterval(zoomAnimation);
+        }
+    }, speed * 1000);
+}
+    </script>
+</body>
+</html>
