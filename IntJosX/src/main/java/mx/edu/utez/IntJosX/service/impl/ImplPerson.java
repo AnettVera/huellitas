@@ -37,46 +37,8 @@ public class ImplPerson implements IPerson {
 
         PersonBean savedPerson = personDao.save(person);
 
-        switch (personDto.getRol().toUpperCase()) {
-            case "empleado":
-                createEmpleado(savedPerson);
-                break;
-            case "cliente":
-                createCliente(savedPerson);
-                break;
-            case "EMPLEADO":
-                createEmpleado(savedPerson);
-                break;
-            case "Cliente":
-                createCliente(savedPerson);
-                break;
-            case "CLIENTE":
-                createCliente(savedPerson);
-                break;
-            case "Empleado":
-                createEmpleado(savedPerson);
-                break;
-
-            default:
-
-                break;
-        }
 
         return savedPerson;
-    }
-
-    private void createEmpleado(PersonBean person) {
-        EmpleadoBean empleado = EmpleadoBean.builder()
-                .personBean(person)
-                .build();
-        empleadoDao.save(empleado);
-    }
-
-    private void createCliente(PersonBean person) {
-        ClienteBean cliente = ClienteBean.builder()
-                .personBean(person)
-                .build();
-        clienteDao.save(cliente);
     }
 
     @Override

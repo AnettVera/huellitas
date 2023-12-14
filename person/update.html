@@ -50,36 +50,41 @@
           <div class="formbg-outer">
             <div class="formbg">
               <div class="formbg-inner padding-horizontal--48" id="updateform">
-                <form id="consultabranch">
+                <form id="consultarperson" >
                     <h3>Buscar el ID de la persona</h3>
                     <div class="field padding-bottom--24">
-                        <input type="text" id="id" name="id_branch" required>
+                        <input type="text" id="id" name="id" required>
                     </div>
                     <div class="field padding-bottom--24">
                         <button type="submit" style="color: white; background-color: #001449;">Buscar</button>
                     </div>
                     
                 </form>
-                <form id="stripe-login">
+                <form id="update_form">
+                <input type="hidden" id="id">
                   <div class="field padding-bottom--24">
                     <label for="email">Nombre</label>
-                    <input type="text" name="email">
+                    <input type="text" name="nombre" id="nombre">
                   </div>
                   <div class="field padding-bottom--24">
                     <label for="email">Apellido paterno</label>
-                    <input type="text" name="email">
+                    <input type="text" name="ape1" id="ape1">
                   </div>
                   <div class="field padding-bottom--24">
                     <label for="email">Apellido materno</label>
-                    <input type="text" name="email">
+                    <input type="text" name="ape2" id="ape2">
                   </div>
                   <div class="field padding-bottom--24">
                     <label for="email">Correo</label>
-                    <input type="email" name="email">
+                    <input type="email" name="mail" id="mail">
                   </div>
                   <div class="field padding-bottom--24">
                     <label for="email">Numero telefonico</label>
-                    <input type="number" name="email">
+                    <input type="number" name="tel" id="tel">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Rol</label>
+                    <input type="text" name="rol" id="rol" readonly>
                   </div>
                   <div class="field padding-bottom--24">
                     <input type="submit" name="submit" value="Actualizar">
@@ -95,4 +100,5 @@
 
     <div id="response"></div>
   </body>
+  <script src="./../js/persona/update.js"></script>
 </html>

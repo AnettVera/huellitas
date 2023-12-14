@@ -54,9 +54,10 @@ public class PersonController {
                 .id(personUpdate.getId())
                 .ape1(personUpdate.getApe1())
                 .ape2(personUpdate.getApe2())
-                .nombre(personUpdate.getApe2())
+                .nombre(personUpdate.getNombre())
                 .mail(personUpdate.getMail())
                 .tel(personUpdate.getTel())
+                .rol(personUpdate.getRol())
                 .build();
 
     }

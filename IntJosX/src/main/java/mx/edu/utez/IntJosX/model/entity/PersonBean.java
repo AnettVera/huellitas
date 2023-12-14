@@ -32,7 +32,7 @@ public class PersonBean {
     @Column(name = "tel", nullable = false, length = 10)
     private long tel;
 
-    @Column(name = "rol", nullable = false, length = 8)
+    @Column(name = "rol", length = 8)
     private String rol;
 
 
