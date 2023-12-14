@@ -1,27 +1,22 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-   
-    fetchAllBranches();
+    fetchAllPeople(); 
 });
 
-
-function fetchAllBranches() {
+function fetchAllPeople() {
     fetch('http://localhost:8080/api/v1/person/') 
         .then(response => response.json())
         .then(data => {
-           
-            displayBranches(data);
+            displayPeople(data);
         })
-        .catch(error => console.error('Error al obtener sucursales:', error));
+        .catch(error => console.error('Error al obtener los registros:', error));
 }
 
-function displayBranches(branches) {
+function displayPeople(people) {
     let tableBody = document.querySelector('.table tbody');
 
- 
     tableBody.innerHTML = '';
 
-    branches.forEach(branch => {
+    people.forEach(person => {
         let row = tableBody.insertRow(); 
 
         // Celdas de la fila
@@ -37,10 +32,8 @@ function displayBranches(branches) {
                                     <label for="checkbox${person.id}"></label>
                                   </span>`;
         idCell.textContent = person.id; 
-        nameCell.textContent = person.nombre+" "+person.ape1+" "+person.ape2;
+        nameCell.textContent = person.nombre;
         numberCell.textContent = person.tel; 
-        rolCell.textContent= person.tel;
-
-
+        rolCell.textContent= person.rol; // Corregido a person.rol
     });
 }

@@ -18,17 +18,20 @@ public class PersonController {
 
 
     @GetMapping("/")
+    @CrossOrigin(origins = "*", methods = {RequestMethod.GET})
     public List<PersonBean> getPerson(){
         return personService.findAll();
     }
 
 
     @GetMapping("/{id}")
+    @CrossOrigin(origins = "*", methods = {RequestMethod.GET})
     public PersonBean showById(@PathVariable Integer id){
         return personService.findById(id);
     }
 
     @PostMapping("/")
+    @CrossOrigin(origins = "*", methods = {RequestMethod.POST})
     public PersonDto create(@RequestBody PersonDto personDto){
         PersonBean personSave= personService.save(personDto);
         return  PersonDto.builder()
@@ -44,6 +47,7 @@ public class PersonController {
 
 
     @PutMapping("/")
+    @CrossOrigin(origins = "*", methods = {RequestMethod.PUT})
     public PersonDto update(@RequestBody PersonDto personDto){
         PersonBean personUpdate= personService.save(personDto);
         return PersonDto.builder()
@@ -59,6 +63,7 @@ public class PersonController {
 
 
     @DeleteMapping("/{id}")
+    @CrossOrigin(origins = "*", methods = {RequestMethod.DELETE})
     public void delete(@PathVariable Integer id){
         PersonBean person= personService.findById(id);
         personService.delete(person);
