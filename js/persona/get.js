@@ -28,7 +28,7 @@ function displayPeople(people) {
 
         // Contenido de las celdas
         checkboxCell.innerHTML = `<span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox${person.id}" name="options[]" value="${person.id}">
+                                    <input type="checkbox" id="checkbox${person.id}" name="options" value="${person.id}">
                                     <label for="checkbox${person.id}"></label>
                                   </span>`;
         idCell.textContent = person.id; 
