@@ -1,7 +1,7 @@
 document.getElementById('registroform').addEventListener('submit',function(event){
     event.preventDefault();
     let nombre = document.getElementById('nombre').value;
-    let ape1= document.getElementById('ap1').value;
+    let ape1= document.getElementById('ape1').value;
     let ape2= document.getElementById('ape2').value;
     let mail= document.getElementById('mail').value;
     let tel= document.getElementById('tel').value;
@@ -18,7 +18,7 @@ document.getElementById('registroform').addEventListener('submit',function(event
     .then(data =>{
         document.getElementById('response').innerHTML = JSON.stringify(data);
         if(data){
-            window.location.href ="index.html"
+            window.location.href ="crud.html"
         }
     })
 })
