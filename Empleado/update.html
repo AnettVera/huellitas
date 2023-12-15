@@ -50,10 +50,28 @@
           <div class="formbg-outer">
             <div class="formbg">
               <div class="formbg-inner padding-horizontal--48">
-                <form id="stripe-login">
+                  <form id="consultarempleado">
+                    <h3>Buscar el ID del empleado</h3>
+                    <div class="field padding-bottom--24">
+                      <input type="text" id="id_e" name="id_e" required>
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <button type="submit" style="color: white; background-color: #001449;">Buscar</button>
+                    </div>
+                  
+                  </form>
+                <form id="update_form">
                   <div class="field padding-bottom--24">
-                    <label for="email">Email</label>
-                    <input type="email" name="email">
+                    <label for="email">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">turno</label>
+                    <input type="text" name="turno" id="turno">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="email">Salario</label>
+                    <input type="number" name="email" id="salario">
                   </div>
                   <div class="field padding-bottom--24">
                     <input type="submit" name="submit" value="Actualizar">
@@ -69,4 +87,5 @@
 
     <div id="response"></div>
   </body>
+  <script src="./../js/empleado/update.js"></script>
 </html>
