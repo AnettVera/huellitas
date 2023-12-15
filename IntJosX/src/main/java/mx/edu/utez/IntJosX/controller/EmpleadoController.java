@@ -15,6 +15,7 @@ import java.util.Map;
 @AllArgsConstructor
 @RestController
 @RequestMapping("api/v1/empleado")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EmpleadoController {
     private final ImplEmpleado empleadoService;
 
